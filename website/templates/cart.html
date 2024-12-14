@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/123.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a
+          href="index.php"
+          style="text-decoration: none; color: white"
+          title="Homepage"
+        >
+          <img
+            src="img/logom.jpg"
+            alt="Explore360 Logo"
+            class="logo-img"
+            width="90"
+            height="90"
+          />
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li>
+            <a href="login.php" title="Login to your account"
+              ><span class="material-icons">login</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+      
+    </header>
+
+    <h1>Your Cart</h1>
+    <div id="cart-items" class="gear-items1"></div>
+    <div id="total-price" class="total-price"></div>
+    <button onclick="window.location.href='address.php'" class="checkout-btn">
+      Checkout
+    </button>
+    <button onclick="clearCart()" class="clear-cart-btn">Clear Cart</button>
+
+    <footer>
+      <p>&copy; 2023 Explore360. All rights reserved.</p>
+
+      <div class="contact-info">
+        <p>Address: 123 Adventure Lane, Johannesburg, South Africa</p>
+        <p>Phone: +27 10 123 4567</p>
+      </div>
+
+      <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+      </div>
+    </footer>
+
+    <script src="cart.js"></script>
+  </body>
+</html>
