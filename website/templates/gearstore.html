@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Gear Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/123.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.php" style="text-decoration: none; color: white" title="Homepage">
+                <img src="img/logom.jpg" alt="Explore360 Logo" class="logo-img" width="90" height="90" />
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="tourist-attraction.html">Tourist Attractions</a></li>
+                <li><a href="login.php" title="Login to your account"
+                  ><span class="material-icons">login</span></a
+                ></li>
+            </ul>
+        </nav>
+        <div class="search-cart">
+            <input type="text" id="searchInput" placeholder="Search items..." onkeyup="filterItems()" />
+            <p id="noResultsMessage" style="display: none; color: red">
+              No items match your search.
+            </p>
+            <a href="cart.html" class="cart-icon" onclick="toggleCartModal()">🛒</a>
+        </div>
+    </header>
+
+    <h1>Gear Store</h1>
+    <p class="store-description">Get the gear you need for your next adventure!</p>
+
+    <div class="gear-category">
+        <h2>Outdoor Adventure Gear</h2>
+        <p>For the outdoor enthusiast, we've got you covered with our selection of outdoor gear.</p>
+
+        <div class="gear-items">
+            <!-- Hiking Boots -->
+            <div class="gear-item" data-name="Hiking Boots">
+                <img src="img/hikingboots.jpg" alt="Hiking Boots" />
+                <h3>Hiking Boots</h3>
+                <p>Sturdy and waterproof, perfect for tackling rough terrain.</p>
+                <div class="price-container">
+                    <span class="price">R600</span>
+                    <button
+              class="buy-btn"
+              onclick="viewItem(1, 'Hiking Boots', 600)"
+            >
+              Add to Cart
+            </button>
+                </div>
+            </div>
+            <!-- Backpacks -->
+            <div class="gear-item" data-name="Backpack">
+                <img src="img/backpack.jpg" alt="Backpack" />
+                <h3>Backpack</h3>
+                <p>Comfortable and spacious, designed for long hikes and camping trips.</p>
+                <div class="price-container">
+                    <span class="price">R400</span>
+                    <button class="buy-btn" 
+                    onclick="viewItem(2, 'Backpack', 400)" >
+                    Add to Cart
+                  </button>
+                </div>
+            </div>
+            <!-- Trekking Poles -->
+            <div class="gear-item" data-name="Trekking Poles">
+                <img src="img/trekkingpoles.jpg" alt="Trekking Poles" />
+                <h3>Trekking Poles</h3>
+                <p>Lightweight and adjustable, providing extra stability on the trail.</p>
+                <div class="price-container">
+                    <span class="price">R260</span>
+                    <button class="buy-btn" onclick="viewItem(3, 'Trekking Poles', 260)">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Water Bottles -->
+            <div class="gear-item" data-name="Water Bottles">
+                <img src="img/waterbottles.jpg" alt="Water Bottles" />
+                <h3>Water Bottles</h3>
+                <p>Stay hydrated on the go with our BPA-free water bottles.</p>
+                <div class="price-container">
+                    <span class="price">R80</span>
+                    <button class="buy-btn" onclick="viewItem(4, 'Water Bottles', 80)">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Camping Tents -->
+            <div class="gear-item" data-name="Camping Tents">
+                <img src="img/campingtents.jpg" alt="Camping Tents" />
+                <h3>Camping Tents</h3>
+                <p>Camping tent - MH100 XXL - 4 person.</p>
+                <div class="price-container">
+                    <span class="price">R2500</span>
+                    <button class="buy-btn" onclick="viewItem(5, 'Camping Tents', 2500)">Add to Cart</button>
+                </div>
+            </div>
+            <!-- First Aid Kits -->
+            <div class="gear-item" data-name="First Aid Kits">
+                <img src="img/firstaidkits.jpg" alt="First Aid Kits" />
+                <h3>First Aid Kits</h3>
+                <p>Be prepared for any situation with our comprehensive first aid kits.</p>
+                <div class="price-container">
+                    <span class="price">R600</span>
+                    <button class="buy-btn" onclick="viewItem(6, 'First Aid Kits', 600)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Bicycle Helmet -->
+        <div class="gear-item" data-name="Bicycle Helmet">
+          <img src="img/bicyclehelmet.jpg" alt="Bicycle Helmet" />
+          <h3>Bicycle Helmet</h3>
+          <p>Trek Velocis Mips Road Bike Helmet</p>
+          <div class="price-container">
+            <span class="price">R2000</span>
+            <button
+              class="buy-btn"
+              onclick="viewItem(7, 'Bicycle Helmet', 2000)"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Carabiners -->
+        <div class="gear-item" data-name="Carabiners">
+          <img src="img/carabiners.jpg" alt="Carabiners" />
+          <h3>Carabiners</h3>
+          <p>Domum Twist Lock Climbing Carabiner Clips, Black</p>
+          <div class="price-container">
+            <span class="price">R400</span>
+            <button class="buy-btn" onclick="viewItem(8, 'Carabiners', 400)">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Hydration packs -->
+        <div class="gear-item" data-name="hydration Packs">
+          <img src="img/hydrationpacks.jpg" alt="hydration Packs" />
+          <h3>Hydration Packs</h3>
+          <p>Fourteener™ 26 Hydration Hiking Pack 26L with 3L Reservoir</p>
+          <div class="price-container">
+            <span class="price">R750</span>
+            <button
+              class="buy-btn"
+              onclick="viewItem(9, 'Hydration Packs', 750)"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Wetsuit -->
+        <div class="gear-item" data-name="Wetsuits">
+          <img src="img/wetsuits.jpg" alt="Wetsuits" />
+          <h3>Wetsuit</h3>
+          <p>Maverick Wetsuit</p>
+          <div class="price-container">
+            <span class="price">R700</span>
+            <button class="buy-btn" onclick="viewItem(10, 'Wetsuits', 700)">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Waterproof bags -->
+        <div class="gear-item" data-name="Waterproof Bag">
+          <img src="img/waterproofbag.jpg" alt="Waterproof Bag" />
+          <h3>Waterproof Bag</h3>
+          <p>Ocean and Earth - Bag Waterproof Wetsuit Bag</p>
+          <div class="price-container">
+            <span class="price">R800</span>
+            <button
+              class="buy-btn"
+              onclick="viewItem(11, 'Waterproof Bag', 800)"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- GPS device for hiking & Trekking -->
+        <div class="gear-item" data-name="Handheld gps">
+          <img src="img/Handheldgps.jpg" alt="Handheld gps" />
+          <h3>Handheld GPS Device</h3>
+          <p>Garmin GPSMAP 67i</p>
+          <div class="price-container">
+            <span class="price">R8000</span>
+            <button class="buy-btn" onclick="viewItem(12, 'Handheld gps', 800)">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Explore360. All rights reserved.</p>
+        <div class="contact-info">
+            <p>Address: 123 Adventure Lane, Johannesburg, South Africa</p>
+            <p>Phone: +27 10 123 4567</p>
+        </div>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
